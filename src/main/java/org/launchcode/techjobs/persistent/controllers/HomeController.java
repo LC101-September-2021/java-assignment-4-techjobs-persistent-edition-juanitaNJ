@@ -46,8 +46,7 @@ public class HomeController {
             model.addAttribute("title", "Add Job");
             return "add";
         }
-        // get employer out of repository
-        employerRepository.save(newJob);
+
         return "redirect:";
     }
 
