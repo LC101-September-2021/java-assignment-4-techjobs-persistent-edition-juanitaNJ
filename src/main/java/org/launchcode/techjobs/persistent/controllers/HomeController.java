@@ -2,6 +2,7 @@ package org.launchcode.techjobs.persistent.controllers;
 
 import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Job;
+import org.launchcode.techjobs.persistent.models.Skill;
 import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
 import org.launchcode.techjobs.persistent.models.data.JobRepository;
 import org.launchcode.techjobs.persistent.models.data.SkillRepository;
@@ -59,6 +60,12 @@ public class HomeController {
         }
         Employer employer = employerRepository.findById(employerId).get();
         newJob.setEmployer(employer);
+
+        // does that v go there?
+
+//        List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
+//        newJob.setSkills(skillObjs);
+
         // newJob.setSkills();
         // jobRepository.save(newJob);
         return "redirect:";
