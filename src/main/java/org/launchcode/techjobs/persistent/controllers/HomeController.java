@@ -35,6 +35,7 @@ public class HomeController {
     public String index(Model model) {
 
         model.addAttribute("title", "My Jobs");
+        model.addAttribute("jobs", jobRepository.findAll());
 
         return "index";
     }
@@ -63,11 +64,11 @@ public class HomeController {
 
         // does that v go there?
 
-//        List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
-//        newJob.setSkills(skillObjs);
+        List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
+        newJob.setSkills(skillObjs);
 
-        // newJob.setSkills();
-        // jobRepository.save(newJob);
+//         newJob.setSkills();
+         jobRepository.save(newJob);
         return "redirect:";
     }
 
